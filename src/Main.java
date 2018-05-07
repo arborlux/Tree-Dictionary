@@ -1,6 +1,6 @@
 /**********************************************************************************************************************
  * Class:			Main
- * Purpose:			This is the driver class for the Dictionary. Displays a keyboard driver console menu in a loop.
+ * Purpose:			This is the driver class for the Dictionary. Displays a keyboard driven console menu in a loop.
  * Author:			Patrick Griffith
  * Created:   		November 17, 2016
  * Last Edited: 	December 6, 2016
