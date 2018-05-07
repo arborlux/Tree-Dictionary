@@ -1,28 +1,29 @@
+/**********************************************************************************************************************
+ * Class:			Dictionary
+ * Purpose:			This class manages the TreeMap<String, Integer> data structure used for storing words, where
+ * 						String is the word and Integer is the number of times it exists in the TreeMap.
+ * Author:			Patrick Griffith
+ * Created:   		November 17, 2016
+ * Last Edited: 	December 6, 2016
+ *
+ * Data Members:
+ * 					tree: TreeMap<String, Integer> - TreeMap of words and the number of times they have been added
+ * Methods:
+ * 					Dictionary() - default constructor - allocates a new TreeMap<String, Integer>
+ * 					toString() : String - returns the number of nodes that tree contains
+ * 					clear() - erases all mappings within tree
+ * 					readFromFile() : boolean - populates the tree from all words in a file
+ * 					readFromKeyboard(Scanner) - adds words to the tree from user input
+ * 					addToTree(String) - handles the logic for adding to a Tree Map
+ * 					openFile() : Scanner - attempts to open a file and returns an open Scanner if it exists
+ * 					search(String) : int - returns the number of times a word exists within tree
+ **********************************************************************************************************************/
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.TreeMap;
-/***************************************************************************************************************
- * Class:			Dictionary
- * Purpose:			This class manages the TreeMap<String, Integer> data structure used for storing words, where 
- * 						String is the word and Integer is the number of times it exists in the TreeMap. 
- * 						Includes the logic for adding from a keyboard or file, searching, or displaying the number of nodes in the tree.
- * Author:			Patrick Griffith
- * Course:	  		CST8130_300 Data Structures
- * Created:   		November 17, 2016
- * Last Edited: 	December 6, 2016
- * 
- * Data Members:	tree: TreeMap<String, Integer> - TreeMap of words and the number of times they have been added 
- * 
- * Methods:			Dictionary() - default constructor - allocates a new TreeMap<String, Integer>
- * 					toString() : String - returns the number of nodes that tree contains
- * 					clear() - erases all mappings within tree
- * 					readFromFile() : boolean - opens a file if found and adds each word to the tree with addToTree(String) method
- * 					readFromKeyboard(Scanner) - prompts the user to enter some text and adds each word to the tree with addToTree(String) method
- * 					addToTree(String) - strips each passed in word for special characters and inserts into tree with an updated count
- * 					openFile() : Scanner - attempts to open a file and returns an open Scanner if it exists
- * 					search(String) : int - returns the number of times a word exists within tree
- ***************************************************************************************************************/
+
 public class Dictionary {
 	/* CONSTRUCTORS	---------------------------------------------------------	*/	
 	public Dictionary() {
@@ -86,8 +87,9 @@ public class Dictionary {
 		}
 	}
 
+	//return the word count, if it doesn't exist return 0 since it will be added for the first time
 	public int search(String word) {
-		return (tree.containsKey(word)) ? tree.get(word) : 0; //return the word count, if it doesn't exist return 0 since it will be added for the first time
+		return (tree.containsKey(word)) ? tree.get(word) : 0;
 	}
 
 

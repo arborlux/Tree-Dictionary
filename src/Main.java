@@ -1,14 +1,14 @@
-import java.util.Scanner;
-/***************************************************************************************************************
- * Class:			Assign4
- * Purpose:			This is the driver class for Assignment #4 - Dictionary. Displays a menu to a user to add words 
- * 						either from the keyboard or from a file to a TreeMap and tracks how many of each word has been added.
+/**********************************************************************************************************************
+ * Class:			Main
+ * Purpose:			This is the driver class for the Dictionary. Displays a keyboard driver console menu in a loop.
  * Author:			Patrick Griffith
- * Course:	  		CST8130_300 Data Structures
  * Created:   		November 17, 2016
  * Last Edited: 	December 6, 2016
- ***************************************************************************************************************/
-public class Assign4 {
+ **********************************************************************************************************************/
+
+import java.util.Scanner;
+
+public class Main {
 	/* ENTRY POINT for STAND-ALONE OPERATION --------------------------------	*/
 	public static void main(String[] args) {
 		Dictionary dictionary = new Dictionary();
